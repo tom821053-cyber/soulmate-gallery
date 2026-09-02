@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Soulmate Eniya 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="hearts"></div>
+
+  <header>
+    <h1>💗 My Soulmate Eniya 💗</h1>
+    <p>A place for beautiful memories ✨</p>
+  </header>
+
+  <!-- CREATE GALLERY -->
+  <section id="createSection" class="card">
+    <h2>Create Your Gallery 📸</h2>
+    <p>Create a private memory gallery and get your own link.</p>
+
+    <input
+      type="text"
+      id="galleryName"
+      placeholder="Enter gallery name"
+      maxlength="40"
+    >
+
+    <button onclick="createGallery()">
+      Create Gallery ✨
+    </button>
+  </section>
+
+
+  <!-- OWNER UPLOAD -->
+  <section id="ownerSection" class="card hidden">
+
+    <h2>Upload Your Memories 📸</h2>
+
+    <p id="galleryLink"></p>
+
+    <label class="uploadBox">
+      📸 Choose Photos
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        multiple
+        hidden
+      >
+    </label>
+
+    <div id="preview"></div>
+
+    <button onclick="savePhotos()">
+      💾 Save Photos
+    </button>
+
+    <p id="status"></p>
+
+    <hr>
+
+    <h2>Share Your Gallery 🔗</h2>
+
+    <input id="shareLink" readonly>
+
+    <button onclick="copyLink()">
+      📋 Copy Link
+    </button>
+
+  </section>
+
+
+  <!-- VIEW GALLERY -->
+  <section id="viewerSection" class="card hidden">
+
+    <h2 id="viewerTitle">Our Memories 💗</h2>
+
+    <div id="gallery"></div>
+
+  </section>
+
+
+  <footer>
+    Made with 💗
+  </footer>
+
+
+  <!-- SUPABASE -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
